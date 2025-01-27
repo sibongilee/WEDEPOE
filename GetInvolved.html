@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Sibongile Nhlapo">
+    <meta name="viewport" content="width=device-width, initial scale= 1.0">
+    <title>GetInvolved</title>
+    <meta name="description" content="GetInvolved">
+    <meta name="keywords" content="welcome to our web">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jscript/script.js"defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="AboutUs.html">AboutUs</a></li>
+            <li><a href="Services.html">Products and services</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section class="verse-container">
+        <div class="moving-verse">
+            <span id="bible-verse"></span>
+            <span id="bible-reference"></span>
+        </div>
+        <button id="next-verse">Next Verse</button>
+    </section>
+    <div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+        <img src="images/Logo.jpg" alt="BalancedMinds Logo" style="width: 60px; height: 60px; margin-right: 15px;">
+        <h1 style="margin: 0; font-size: xx-large; font-style: italic;">BalancedMinds</h1>
+    </div>
+
+  </header>
+
+
+    <main>
+        <div class="section">
+            <h2>Volunteer Opportunities</h2>
+            <p>Discover how you can volunteer with Active Minds and make a difference in your community.</p>
+            <a href="#volunteerForm" class="button">Sign Up to Volunteer</a>
+        </div>
+
+        <div id="volunteerForm" class="section">
+            <h4>Volunteer Sign-Up Form</h4>
+            <form id="form" onsubmit="handleVolunteerForm(event)">
+                <label for="volunteerName">Name:</label>
+                <input type="text" id="volunteerName" required>
+
+                <label for="volunteerEmail">Email:</label>
+                <input type="email" id="volunteerEmail" required>
+
+                <button type="submit" class="button">Submit</button>
+            </form>
+            <div id="volunteerResponse" class="form-response"></div>
+        </div>
+        </div>
+
+        <div class="section">
+            <h2>Donate</h2>
+            <p>Your donations help us continue our mission of promoting mental health awareness and support.</p>
+            <img src="Images/Donate-Funds.jpg" alt="" width="500">
+            <a href="#donationForm" class="button">Make a Donation</a>
+        </div>
+        <div id="donationForm" class="section">
+            <h3>Donation Form</h3>
+            <form id="donateForm" onsubmit="handleDonationForm(event)">
+                <label for="donorName">Name:</label>
+                <input type="text" id="donorName" required>
+
+                <label for="donorEmail">Email:</label>
+                <input type="email" id="donorEmail" required>
+
+                <label for="donationAmount">Donation Amount (ZAR):</label>
+                <input type="number" id="donationAmount" required min=1>
+
+                <button type="submit" class="button">Donate</button>
+            </form>
+            <div id="donationResponse" class="form-response"></div>
+        </div>
+
+        <section>
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="section">
+                    <h3>Events List</h3>
+                    <p>Stay informed about upcoming events and how you can participate.</p>
+                    <button class="button" onclick="toggleEventList()">View Events</button>
+                    <div class="event-list" id="eventList">
+                        <ul>
+                            <li>Workshop on Mental Health Awareness - June 15, 2024</li>
+                            <li>Community Health Fair - July 20, 2024</li>
+                            <li>Annual Mental Health Gala - August 30, 2024</li>
+                            <li>World Suicide Prevention Day (September 10th)</li>
+                            <li>Sexual Health Week (September 14th to 20th)</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="Home.html" class="button">Back to Home</a>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>
+            <script>
+            var theDate=new Date()
+            document.write("&copy; " + theDate.getFullYear())
+            document.write(" - BalancedMinds | Last modified: ")
+            var theModifiedDate=new Date(document.lastModified)
+            document.write(theModifiedDate.toDateString())
+            </script>
+            <br>Powered by "Sharp-Sharp" Web Hosting
+        </p>
+    </footer>
+    
+</body>
+</html>
